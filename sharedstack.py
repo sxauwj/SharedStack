@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
-
-
 class SharedStack(object):
     """OneArrayToTwoStack"""
 
@@ -11,7 +9,8 @@ class SharedStack(object):
         :param maxsize: Array length
         """
         self.maxsize = maxsize
-        self.items = np.zeros(maxsize, dtype=np.int)
+        self.items = [None for i in range(maxsize)]
+        self.items = np.array(self.items)
         self.lpoint = 0
         self.rpoint = maxsize - 1
 
@@ -44,7 +43,6 @@ class SharedStack(object):
                 self.rpoint += 1
         else:
             print "Please Input 'l' or 'r'"
-
 
 if __name__ == "__main__":
     """UT"""
