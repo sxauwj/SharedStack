@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
+
+
 class SharedStack(object):
     """OneArrayToTwoStack"""
 
@@ -43,6 +45,7 @@ class SharedStack(object):
                 self.rpoint += 1
         else:
             print "Please Input 'l' or 'r'"
+
 
 if __name__ == "__main__":
     """UT"""
